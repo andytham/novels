@@ -9,15 +9,18 @@ const config = {
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
-    publicPath: './',
-    filename: 'bundle.js'
+    publicPath: '/',
+    filename: './bundle.js'
   },
   module: {
     rules: [
       {
         test: /\.js[x]?$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        resolve: {
+          extensions: ['.js', '.jsx'],
+        }
       },
       {
         test:/\.(s*)css$/,

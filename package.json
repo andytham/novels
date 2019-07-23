@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "start": "webpack-dev-server --mode development --open --hot"
   },
   "author": "andytham",
   "license": "ISC",
